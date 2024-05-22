@@ -243,10 +243,10 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          {% for image in portfolio %}
+          {% for imagee in portfolio %}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src={{image.image.url}} class="img-fluid" alt="">
+              <img src={{imagee.image.url}} class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
@@ -305,7 +305,7 @@
               <div class="testimonial-item" data-aos="fade-up">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  {{ person}}
+                  {{ person.description|truncatewords:20}}
                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
                 <img src={{person.image.url}} class="testimonial-img" alt="">
